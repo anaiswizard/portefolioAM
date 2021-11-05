@@ -1,8 +1,5 @@
 body {
-  background-color: rgb(252, 245, 217);
-}
-.titre {
-  color: palevioletred;
+  background-color: white;
 }
 
 .boiteName {
@@ -11,7 +8,7 @@ body {
 
 h1 {
   font-family: "Bonheur Royale", cursive;
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-align: center;
 }
 
@@ -19,7 +16,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 5%;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: rgb(211, 141, 153);
 }
 
 .couronne {
@@ -48,4 +53,92 @@ h1 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.card-body {
+  font-size: 1rem;
+}
+
+.bg-black {
+  background-color: rgb(0, 0, 0);
+}
+
+.card-title {
+  font-family: "Bonheur Royale", cursive;
+  font-size: 3rem;
+}
+
+.dimCouronne2 {
+  display: inline-block;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+}
+
+/* ----------------TOGLLE */
+.containerToggle {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  margin: 2rem;
+  z-index: 1;
+}
+
+#box {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.colorLayer {
+  background-color: black;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+  transition: 150ms ease-in;
+}
+
+.switch {
+  height: 80%;
+  width: 40%;
+  background-color: pink;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  border-radius: 25px;
+  pointer-events: none;
+  transition: 150ms ease-in;
+}
+
+#box:checked ~ .colorLayer {
+  background-color: palevioletred;
+}
+
+#box:checked ~ .switch {
+  transform: translateX(50px);
+}
+
+#box ~ .switch {
+  transform: translateX(0px);
+}
+
+/* --------------------------------------------- */
+
+.white {
+  background-color: white;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.pinkCard {
+  background-color: rgb(211, 141, 153);
 }
